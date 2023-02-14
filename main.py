@@ -16,12 +16,11 @@ price_max = 200300
 
 def scrap_listing(brand, year_max, year_min, km_min, km_max, energy, price_min, price_max, page_num):
     # Créer un dictionnaire pour stocker les en-têtes
-
-
+    headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"}
 
     url = f"https://www.lacentrale.fr/listing?energies={energy}&makesModelsCommercialNames={brand}&mileageMax={km_max}&mileageMin={km_min}&priceMax={price_max}&priceMin={price_min}&yearMax={year_max}&yearMin={year_min}&options=&page={page_num}"
 
-    response = requests.get(url)
+    response = requests.get(url, headers=headers)
     print("je récupère les informations sur la page : " + url)
     return response.text
 
