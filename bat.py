@@ -5,14 +5,15 @@ import random
 from fake_useragent import UserAgent
 
 
-brand = "MERCEDES"
-year_max = 2023
-year_min = 2021
-km_min = 0
-km_max = 100000
-energy = "ess"
-price_min = 0
-price_max = 200300
+brand = input("Entrez une marque MERCEDES, AUDI, PEUGEOT : ")
+year_min = int(input("Entrez l'année minimale : "))
+year_max = int(input("Entrez l'année maximale : "))
+km_min = int(input("Entrez le kilométrage minimal : "))
+km_max = int(input("Entrez le kilométrage maximal : "))
+energy = input(
+    "Entrez le type de carburant  essence:ess, diesiel: dies, electrique: elec : ")
+price_min = int(input("Entrez le prix minimal : "))
+price_max = int(input("Entrez le prix maximal : "))
 
 # Variables utilisées pour stocker les filtres à appliquer lors de la recherche des annonces de voitures.
 
